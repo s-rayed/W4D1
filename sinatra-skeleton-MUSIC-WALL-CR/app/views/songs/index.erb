@@ -6,7 +6,7 @@
     <strong> <%= song.id %>. <%= song.title %></strong> <small><em>(by: <%= song.artist %>)</em></small>
     </p>
     <p>
-      URL: <%= song.url %>
+      URL: <%= song.url.nil? ? "None" : song.url %> 
     </p>
     <p>
       Added: <%= song.created_at %>
