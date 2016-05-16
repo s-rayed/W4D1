@@ -13,6 +13,15 @@ get '/songs/new' do
   erb :'songs/new'
 end
 
+get '/songs/donate' do
+  erb :'songs/donate'
+end
+
+get '/songs/:id' do
+  @song = Song.find params[:id]
+  erb :'songs/show'
+end
+
 post '/songs' do
   @song = Song.new(
     artist: params[:artist],

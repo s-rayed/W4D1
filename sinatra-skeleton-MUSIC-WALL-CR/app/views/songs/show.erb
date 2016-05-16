@@ -1,0 +1,18 @@
+<h1><p>
+  Title: <%= @song.title %>
+</p></h1>
+
+<p>
+  Artist: <%= @song.artist %>
+</p>
+
+<p>
+  URL: <%= @song.url.blank? ? "None" : @song.url %>
+</p>
+
+<p>
+  Created: <%= @song.created_at %>
+</p>
+
+<hr/>
+<a href="/songs">Back to Music Wall</a>

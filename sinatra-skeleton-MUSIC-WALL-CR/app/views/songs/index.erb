@@ -1,12 +1,12 @@
 <h1> Music Wall </h1>
 <% @songs.each do |song| %>
   <div class="song">
-    <h3><a href="/songs/<%= song.id %>"></a></h3>
+    <h3><a href="/songs/<%= song.id %>"> <p>
+    <strong> <%= song.id %>. <%= song.title %></strong></a> <small><em>(by: <%= song.artist %>)</em></small>
+    </p></h3>
+   
     <p>
-    <strong> <%= song.id %>. <%= song.title %></strong> <small><em>(by: <%= song.artist %>)</em></small>
-    </p>
-    <p>
-      URL: <%= song.url.nil? ? "None" : song.url %> 
+      URL: <a href="<%= song.url %>"</a> <%= song.url.nil? ? "None" : song.url %>"</a>
     </p>
     <p>
       Added: <%= song.created_at %>
